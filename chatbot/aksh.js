@@ -95,22 +95,22 @@
     if (!cleanText) return;
 
     const msg = new SpeechSynthesisUtterance(cleanText);
-    msg.lang = 'en-IN'; // Indian English for better accent on both English and Hinglish
+    msg.lang = 'hi-IN'; // Essential for flawless code-switching between Hinglish & English
     msg.rate = 1.0;
     msg.pitch = 1.0;
     
-    // Find the most natural voice available based on device/browser
+    // Find the most natural bilingual voice available based on device/browser
     const voices = window.speechSynthesis.getVoices();
     let bestVoice = null;
 
     if (voices.length > 0) {
-      // Premium English (India) or US/UK voices
-      bestVoice = voices.find(v => v.name.includes('Neerja') && v.name.includes('Natural'))
-               || voices.find(v => v.name.includes('Prabhat') && v.name.includes('Natural'))
-               || voices.find(v => v.name.includes('Google UK English Male'))
-               || voices.find(v => v.name.includes('Google US English'))
-               || voices.find(v => v.lang === 'en-IN')
-               || voices.find(v => v.lang.startsWith('en-'));
+      // Prioritize premium Indian voices trained for bilingual text
+      bestVoice = voices.find(v => v.name.includes('Swara') && v.name.includes('Natural')) // Edge premium Hindi
+               || voices.find(v => v.name.includes('Madhur') && v.name.includes('Natural')) // Edge premium Hindi
+               || voices.find(v => v.name.includes('Neerja') && v.name.includes('Natural')) // Edge premium English-India
+               || voices.find(v => v.name.includes('Google हिन्दी') || v.name.includes('Google hi-IN')) // Chrome premium Hindi
+               || voices.find(v => v.lang === 'hi-IN') // Any generic Hindi voice
+               || voices.find(v => v.lang === 'en-IN'); // Fallback Indian English
     }
     
     if (bestVoice) {
@@ -139,7 +139,10 @@
     for (const [name, info] of Object.entries(K.projects)) {
       if (msg.includes(name.toLowerCase())) {
         let resp = `📦 **${name}**: ${info.desc}`;
-        if (info.url) resp += `\n🔗 Link: ${info.url}`;
+        if (info.url) {
+          const urlLink = info.url.startsWith('http') ? info.url : `https://${info.url}`;
+          resp += `\n🔗 Link: [Visit Project](${urlLink})`;
+        }
         return resp;
       }
     }
