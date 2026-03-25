@@ -3,60 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Ashish Kumar</title>
+    <title>Ashish Kumar — Developer, Builder, Innovator</title>
+    <meta name="description" content="Portfolio of Ashish Kumar — Full Stack Developer, Data Science Student, and GATE 2026 Qualified. Building intelligent apps with Python, Flutter, React, and more.">
+    <meta property="og:title" content="Ashish Kumar — Developer, Builder, Innovator">
+    <meta property="og:description" content="Full Stack Developer & Data Science Student. GATE 2026 Qualified. Building the future with code.">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="Data\images\logo-Photoroom.png" alt="Logo">
-            <span>Ashish Kumar</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about\about.html"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="Project/project.html"><i class="fas fa-briefcase"></i> Projects</a></li>
-                <li><a href="Resume/resume.html"><i class="fas fa-file-alt"></i> Resume</a></li>
-                <li><a href="https://github.com/Aashiskr"><i class="fab fa-github"></i>Github</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Hi There! <span class="wave">👋</span></h1>
-            <h2>I'M <span class="highlight">ASHISH KUMAR</span></h2>
-            <h3><span id="typewriter"></span></h3>
-        </div>
-        <div class="hero-image">
-            <img src="Data\images\sitting-Photoroom.png" alt="Person sitting">
-        </div>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
 
+    <!-- Animated Background -->
+    <div class="bg-animated"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="Data/images/logo-Photoroom.png" alt="Ashish Kumar Logo">
+                <span>Ashish Kumar</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active"><i class="fas fa-home"></i>Home</a>
+                <a href="about/about.html"><i class="fas fa-user"></i>About</a>
+                <a href="Project/project.html"><i class="fas fa-briefcase"></i>Projects</a>
+                <a href="Resume/resume.html"><i class="fas fa-file-alt"></i>Resume</a>
+                <a href="Contact/contact.html"><i class="fas fa-envelope"></i>Contact</a>
+                <a href="https://github.com/Aashiskr" target="_blank" class="nav-github"><i class="fab fa-github"></i>GitHub</a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Available for opportunities
+                </div>
+
+                <p class="hero-greeting">Hi there! <span class="wave">👋</span></p>
+
+                <h1 class="hero-name">
+                    I'm <span class="gradient-text">Ashish Kumar</span>
+                </h1>
+
+                <div class="hero-typewriter-wrapper">
+                    <span class="typed-text" id="typewriter"></span><span class="cursor"></span>
+                </div>
+
+                <p class="hero-description">
+                    Data Science student & Full Stack Developer crafting intelligent applications.
+                    GATE 2026 Qualified. Pushing the boundaries of code every day.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="Project/project.html" class="btn-primary">
+                        <i class="fas fa-rocket"></i> View My Work
+                    </a>
+                    <a href="Resume/resume.html" class="btn-secondary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="avatar-container">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-image">
+                        <img src="Data/images/ashis.jpg" alt="Ashish Kumar">
+                    </div>
+                    <div class="orbit-dot"></div>
+                    <div class="orbit-dot"></div>
+                    <div class="orbit-dot"></div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-  <div class="footer-content">
-    <h2>FIND ME ON</h2>
-    <p>Feel free to connect with me</p>
-    <div class="social-icons">
-      <a href="https://github.com/Aashiskr" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/infashish" target="_blank">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://www.instagram.com/inf._.ashish/profilecard/?igsh=bDFtMGs5bzZscHdt" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p><marquee>Copyright © 2026 Ashish kumar</marquee></p>
-  </div>
-</footer>
+    <!-- Stats Section -->
+    <section class="stats-section reveal">
+        <div class="stats-grid reveal-stagger">
+            <div class="stat-card">
+                <div class="stat-number" data-count="15">0</div>
+                <div class="stat-label">Projects Built</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="7">0</div>
+                <div class="stat-label">Hackathons</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="14">0</div>
+                <div class="stat-label">Certifications</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="2">0</div>
+                <div class="stat-label">Internships</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Let's Connect</h3>
+            <p>Feel free to reach out — I'm always open to new ideas and collaborations.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Aashiskr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/infashish" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/inf._.ashish/profilecard/?igsh=bDFtMGs5bzZscHdt" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ashish Kumar. Designed with ❤️ and code.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
+    <script src="chatbot/aksh.js"></script>
 </body>
 </html>

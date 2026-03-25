@@ -1,639 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Ashish Kumar</title>
-    <link rel="stylesheet" href="about.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="../Data/images/logo-Photoroom.png" alt="Ashish Kumar Logo" />
-        <span>Ashish Kumar</span>
-      </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
-          </li>
-          <li>
-            <a href="about.html"><i class="fas fa-user"></i> About</a>
-          </li>
-          <li>
-            <a href="../Project/project.html"
-              ><i class="fas fa-briefcase"></i> Projects</a
-            >
-          </li>
-          <li>
-            <a href="../Resume/resume.html"
-              ><i class="fas fa-file-alt"></i> Resume</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/Aashiskr"
-              ><i class="fab fa-github"></i> GitHub</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Ashish Kumar</title>
+    <meta name="description" content="Learn about Ashish Kumar — Data Science student, GATE 2026 Qualified, Flutter & Full Stack Developer. Skills, experience, achievements, and certifications.">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
 
-    <section class="about">
-      <div class="about-content">
-        <h2>About <span>Me</span></h2>
-        <p>
-          Hi Everyone, I am <b>Ashish Kumar</b> from Modipuram, Meerut, India.<br />
-          I am a <b>Data Science Student (B.Tech CSE)</b> at Shobhit University
-          and currently working as an <b>Intern at INNextIn</b>.
-        </p>
-        <p>
-          My focus combines <b>Data Science</b> with
-          <b>Full Stack & Mobile Development</b> to build intelligent
-          applications.
-        </p>
-        <p>When I'm not coding, I enjoy:</p>
-        <ul>
-          <li>🎮 Playing Chess</li>
-          <li>😋 Exploring Food</li>
-        </ul>
-        <br />
-        <h2>Experience</h2>
-        <div class="experience-block" style="margin-top: 20px">
-          <p>
-            <strong style="color: #00ffab; font-size: 1.1rem">INNextIn</strong
-            ><br />
-            <em style="color: #888">Intern (Current)</em><br />
-            Currently working as an Intern, contributing to software development
-            projects.
-          </p>
-          <br />
-          <p>
-            <strong style="color: #00ffab; font-size: 1.1rem"
-              >Dezign Bank - Orion Architect</strong
-            ><br />
-            <em style="color: #888">Data Manager Intern (06/2025 - Previous)</em
-            ><br />
-            Organized, maintained, and analyzed project data to support
-            architectural operations.
-          </p>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animated"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../Data/images/logo-Photoroom.png" alt="Ashish Kumar Logo">
+                <span>Ashish Kumar</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html"><i class="fas fa-home"></i>Home</a>
+                <a href="about.html" class="active"><i class="fas fa-user"></i>About</a>
+                <a href="../Project/project.html"><i class="fas fa-briefcase"></i>Projects</a>
+                <a href="../Resume/resume.html"><i class="fas fa-file-alt"></i>Resume</a>
+                <a href="../Contact/contact.html"><i class="fas fa-envelope"></i>Contact</a>
+                <a href="https://github.com/Aashiskr" target="_blank" class="nav-github"><i class="fab fa-github"></i>GitHub</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
         </div>
-      </div>
-      <div class="image">
-        <img src="../Data/images/coder.png" alt="Coder Illustration" />
-      </div>
+    </nav>
+
+    <!-- About Me Section -->
+    <section class="section about-section" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                    <p>Hi Everyone, I am <strong>Ashish Kumar</strong> from Modipuram, Meerut, India.</p>
+                    <p>I am a <strong>Data Science Student (B.Tech CSE)</strong> at Shobhit University and currently working as an <strong>Intern at INNextIn</strong>.</p>
+                    <p>My focus combines <strong>Data Science</strong> with <strong>Full Stack & Mobile Development</strong> to build intelligent applications.</p>
+                    <div class="about-hobbies">
+                        <span class="hobby-tag"><i class="fas fa-chess-knight"></i> Playing Chess</span>
+                        <span class="hobby-tag"><i class="fas fa-utensils"></i> Exploring Food</span>
+                    </div>
+                </div>
+                <div class="about-image-wrapper reveal">
+                    <div class="floating-image">
+                        <img src="../Data/images/coder.png" alt="Coder Illustration">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="about">
-      <div class="about-content">
-        <h1>LET ME <span>INTRODUCE</span> MYSELF</h1>
-        <p>
-          I have evolved from a coding enthusiast to a proficient developer with
-          a <strong>strong command over Python</strong> and
-          <strong>Flutter</strong>.
-        </p>
-        <p>
-          My field of interest includes building innovative
-          <strong>Mobile Apps</strong>, working on
-          <strong>Data Science</strong> projects (AI/ML), and designing with
-          <strong>Webflow</strong>.
-        </p>
-        <p>
-          I am fluent in <strong>C++</strong> and <strong>JavaScript</strong>,
-          and I apply my passion for developing products with
-          <strong>Node.js</strong> and modern frameworks like
-          <strong>React.js</strong>.
-        </p>
-        <p>
-          Currently, I am expanding my horizons by learning
-          <strong>Java</strong> to strengthen my understanding of core software
-          engineering and backend systems.
-        </p>
-      </div>
-      <div class="about-image">
-        <img src="../Data/images/ashis.jpg" alt="Ashish Kumar Photo" />
-      </div>
+    <!-- Introduce Myself Section -->
+    <section class="section intro-section">
+        <div class="section-container">
+            <div class="intro-grid">
+                <div class="intro-text reveal">
+                    <h2 class="section-title">Let Me <span class="gradient-text">Introduce</span> Myself</h2>
+                    <p>I have evolved from a coding enthusiast to a proficient developer with a <strong>strong command over Python</strong> and <strong>Flutter</strong>.</p>
+                    <p>My field of interest includes building innovative <strong>Mobile Apps</strong>, working on <strong>Data Science</strong> projects (AI/ML), and designing with <strong>Webflow</strong>.</p>
+                    <p>I am fluent in <strong>C++</strong> and <strong>JavaScript</strong>, and I apply my passion for developing products with <strong>Node.js</strong> and modern frameworks like <strong>React.js</strong>.</p>
+                    <p>Currently, I am expanding my horizons by learning <strong>Java</strong> to strengthen my understanding of core software engineering and backend systems.</p>
+                </div>
+                <div class="intro-photo reveal">
+                    <div class="photo-frame">
+                        <img src="../Data/images/ashis.jpg" alt="Ashish Kumar">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="skills">
-      <h2>Professional <span>Skillset</span></h2>
-      <div class="skill-icons">
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/icons8-python-48.png"
-            alt="Python"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'"
-          />
-          <p>Python</p>
+    <!-- Experience Timeline -->
+    <section class="section experience-section">
+        <div class="section-container">
+            <h2 class="section-title center reveal">Work <span class="gradient-text">Experience</span></h2>
+            <div class="timeline reveal">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <h3>INNextIn</h3>
+                            <span class="timeline-badge current">Current</span>
+                        </div>
+                        <p class="timeline-role">Software Development Intern</p>
+                        <p class="timeline-desc">Contributing to software development projects, building frontend and backend features for production-grade applications.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <h3>Dezign Bank — Orion Architect</h3>
+                            <span class="timeline-badge">06/2025</span>
+                        </div>
+                        <p class="timeline-role">Data Manager Intern</p>
+                        <p class="timeline-desc">Organized, maintained, and analyzed project data to support architectural operations and decision-making.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/java.png"
-            alt="Java"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg'"
-          />
-          <p>Java</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/c++_processed.png"
-            alt="C++"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg'"
-          />
-          <p>C++</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/icons8-c-50.png"
-            alt="C"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg'"
-          />
-          <p>C</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/icons8-javascript-64.png"
-            alt="JavaScript"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'"
-          />
-          <p>JavaScript</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/typescript.png"
-            alt="TypeScript"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'"
-          />
-          <p>TypeScript</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/php.png"
-            alt="PHP"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg'"
-          />
-          <p>PHP</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/flutter.png"
-            alt="Flutter"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg'"
-          />
-          <p>Flutter</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/icons8-react-native-64.png"
-            alt="React"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'"
-          />
-          <p>React.js</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/nextjs.png"
-            alt="Next.js"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'; this.style.filter='invert(1)'"
-          />
-          <p>Next.js</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/webflow.png"
-            alt="Webflow"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg'"
-          />
-          <p>Webflow</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/icons8-backend-development-64.png"
-            alt="Node.js"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'"
-          />
-          <p>Node.js</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/mysql.png"
-            alt="MySQL"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'"
-          />
-          <p>MySQL</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/numpy.png"
-            alt="NumPy"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg'"
-          />
-          <p>NumPy</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/pandas.png"
-            alt="Pandas"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg'"
-          />
-          <p>Pandas</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/git.png"
-            alt="Git"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'"
-          />
-          <p>Git</p>
-        </div>
-        <div class="icon-box">
-          <img
-            src="../Data/images/icons/figma.png"
-            alt="Figma"
-            onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'"
-          />
-          <p>Figma</p>
-        </div>
-      </div>
     </section>
 
-    <section class="achievements">
-      <h2>Achievements</h2>
-
-      <div class="certificates-grid">
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Achievements/GATE.png"
-            alt="GATE Qualified 2026"
-          />
-          <p class="achievement-desc">
-            Qualified GATE 2026 with AIR 12467, demonstrating strong understanding of data science and engineering concepts.
-          </p>
-          <a
-            href="https://www.linkedin.com/posts/infashish_gate2026-datascience-ai-activity-7441325291265941505-uuI_?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
+    <!-- Skills Section -->
+    <section class="section skills-section">
+        <div class="section-container">
+            <h2 class="section-title center reveal">Professional <span class="gradient-text">Skillset</span></h2>
+            <div class="skills-grid reveal-stagger" id="skillsGrid">
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    <p>Java</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                    <p>C++</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+                    <p>C</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                    <p>TypeScript</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                    <p>PHP</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                    <p>Flutter</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                    <p>React.js</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" style="filter: invert(1);">
+                    <p>Next.js</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                    <p>Node.js</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                    <p>MySQL</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy">
+                    <p>NumPy</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas">
+                    <p>Pandas</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    <p>Git</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                    <p>Figma</p>
+                </div>
+                <div class="skill-card glass-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg" alt="Webflow">
+                    <p>Webflow</p>
+                </div>
+            </div>
         </div>
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Achievements/Data Manager Intern with Stipend.jpg"
-            alt="Data Manager Intern"
-          />
-          <p class="achievement-desc">
-            Worked as a Data Manager Intern at Dezign Bank, organizing and
-            analyzing architectural project data.
-          </p>
-          <a
-            href="https://www.linkedin.com/posts/infashish_internship-dataanalytics-python-activity-7358415880667500544-eBGZ"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Achievements/Azure Quiz.png"
-            alt="Azure 2nd Rank"
-          />
-          <p class="achievement-desc">
-            Secured 2nd Rank in Azure 101 Quiz, demonstrating strong cloud
-            computing fundamentals.
-          </p>
-          <a
-            href="https://www.linkedin.com/posts/infashish_linkedinpremium-azure101-shobhituniversity-activity-7237785492316921856-bW5Y"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Achievements/First Rank in project Expo 2025.png"
-            alt="Project Expo 1st Rank"
-          />
-          <p class="achievement-desc">
-            Awarded 1st Rank in Project Expo 2025 for showcasing a cutting-edge
-            technical project.
-          </p>
-          <a
-            href="https://www.linkedin.com/posts/infashish_innovation-ai-virtualassistant-activity-7325017598662737920-Tshr"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Achievements/First Rank internal SIH 2025.png"
-            alt="Internal SIH 1st Rank"
-          />
-          <p class="achievement-desc">
-            Achieved 1st Rank in the Internal Smart India Hackathon 2025 for
-            innovative problem solving.
-          </p>
-          <a
-            href="https://www.linkedin.com/posts/infashish_sih2025-hackathon-innovation-activity-7372956928739586048-s_QN"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Achievements/First Place in SU Code Hunt 2024.png"
-            alt="SU Code Hunt 1st Rank"
-          />
-          <p class="achievement-desc">
-            Secured 1st Place in the university-level coding contest using
-            Python programming skills.
-          </p>
-          <a
-            href="https://www.linkedin.com/posts/infashish_python-coding-achievement-activity-7234953974066339842-fH2h"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Achievements/Google Developers Group Hack Heist top 5 rank.png"
-            alt="Hack Heist Top Rank"
-          />
-          <p class="achievement-desc">
-            Ranked Top 5 in the Hack Heist 2024 hackathon organized by Google
-            Developer Group.
-          </p>
-          <a
-            href="https://www.linkedin.com/posts/infashish_hackheist-hackathonexerience-miet-activity-7313273174152867840-NeQ_"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-      </div>
     </section>
 
-    <section class="certifications">
-      <h2><span>Certifications</span></h2>
-
-      <div style="margin-bottom: 30px; text-align: center">
-        <p style="font-size: 0.9rem; color: #888">
-          (Click on certificate image to zoom)
-        </p>
-      </div>
-
-      <div class="certificates-grid">
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/AI Data Engineer.jpg"
-            alt="AI Data Engineer"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_ai-dataengineer-reliancefoundation-activity-7355220916286447617-RyuF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
+    <!-- Achievements Section -->
+    <section class="section achievements-section">
+        <div class="section-container">
+            <h2 class="section-title center reveal">Key <span class="gradient-text">Achievements</span></h2>
+            <div class="achievements-grid reveal-stagger">
+                <div class="achievement-card glass-card">
+                    <img src="../Data/images/Achievements/GATE.png" alt="GATE Qualified 2026">
+                    <div class="achievement-info">
+                        <h4>GATE 2026 Qualified</h4>
+                        <p>AIR 12467 — Strong grasp of Data Science & Engineering concepts.</p>
+                        <a href="https://www.linkedin.com/posts/infashish_gate2026-datascience-ai-activity-7441325291265941505-uuI_?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card">
+                    <img src="../Data/images/Achievements/Data Manager Intern with Stipend.jpg" alt="Data Manager Intern">
+                    <div class="achievement-info">
+                        <h4>Data Manager Intern</h4>
+                        <p>Dezign Bank — Organized and analyzed architectural project data.</p>
+                        <a href="https://www.linkedin.com/posts/infashish_internship-dataanalytics-python-activity-7358415880667500544-eBGZ" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card">
+                    <img src="../Data/images/Achievements/Azure Quiz.png" alt="Azure 2nd Rank" class="zoomable">
+                    <div class="achievement-info">
+                        <h4>Azure 101 Quiz — 2nd Rank</h4>
+                        <p>Demonstrated strong cloud computing fundamentals.</p>
+                        <a href="https://www.linkedin.com/posts/infashish_linkedinpremium-azure101-shobhituniversity-activity-7237785492316921856-bW5Y" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card">
+                    <img src="../Data/images/Achievements/First Rank in project Expo 2025.png" alt="Project Expo 1st Rank" class="zoomable">
+                    <div class="achievement-info">
+                        <h4>Project Expo 2025 — 1st Rank</h4>
+                        <p>Showcased a cutting-edge technical project.</p>
+                        <a href="https://www.linkedin.com/posts/infashish_innovation-ai-virtualassistant-activity-7325017598662737920-Tshr" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card">
+                    <img src="../Data/images/Achievements/First Rank internal SIH 2025.png" alt="Internal SIH 1st Rank">
+                    <div class="achievement-info">
+                        <h4>Internal SIH 2025 — 1st Rank</h4>
+                        <p>Innovative problem solving at Smart India Hackathon.</p>
+                        <a href="https://www.linkedin.com/posts/infashish_sih2025-hackathon-innovation-activity-7372956928739586048-s_QN" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card">
+                    <img src="../Data/images/Achievements/First Place in SU Code Hunt 2024.png" alt="SU Code Hunt 1st">
+                    <div class="achievement-info">
+                        <h4>SU Code Hunt 2024 — 1st Place</h4>
+                        <p>University-level coding contest using Python programming.</p>
+                        <a href="https://www.linkedin.com/posts/infashish_python-coding-achievement-activity-7234953974066339842-fH2h" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                    </div>
+                </div>
+                <div class="achievement-card glass-card">
+                    <img src="../Data/images/Achievements/Google Developers Group Hack Heist top 5 rank.png" alt="Hack Heist Top 5">
+                    <div class="achievement-info">
+                        <h4>GDG Hack Heist — Top 5</h4>
+                        <p>Ranked Top 5 in the Hack Heist 2024 by Google Developer Group.</p>
+                        <a href="https://www.linkedin.com/posts/infashish_hackheist-hackathonexerience-miet-activity-7313273174152867840-NeQ_" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/Data Manager intern.jpg"
-            alt="Data Manager Internship Certificates"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_internship-dataanalytics-python-activity-7358415880667500544-eBGZ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/firstrankincoderhunt.jpg"
-            alt="Coder Hunt First Rank"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_python-coding-achievement-activity-7234953974066339842-fH2h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/Internal SiH 2025 1st rank.png"
-            alt="Internal SIH 1st Rank 2025"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_sih2025-hackathon-innovation-activity-7372956928739586048-s_QN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/36-hour journey at Hack Heist! 🚀 Top 10 Rank.png"
-            alt="36-hour journey at Hack Heist! 🚀 Top 10 Rank"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_hackheist-hackathonexerience-miet-activity-7313273174152867840-NeQ_?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/TechUdyam Hackathon hosted by MIET.png"
-            alt="TechUdyam Hackathon hosted by MIET"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_hackathon-techudyam-teamwork-activity-7249976779589726209-kTCA?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/'Innovating with Generative AI.png"
-            alt="Innovating with Generative AI"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_generativeai-shobhituniversity-aiinnovation-activity-7243767942658588672-EMhP?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/React js.jpg"
-            alt="React Workshop"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_reactjs-webdevelopment-professionalgrowth-activity-7207785934417715200-pojB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/Iot workshop.jpg"
-            alt="IoT Workshop"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_iot-python-raspberrypi-activity-7207415603517640704-tbTA?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/internal sih 2023.jpg"
-            alt="Internal SIH"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_firstcollegecertificate-smartindiahackathon2023-activity-7139540944189644800-rG4r?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/Cybersecurity.jpg"
-            alt="Cybersecurity"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_cybersecurity-techmahindra-skillsindia-activity-7220747702978891776--_ar?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/code kshetra hackathon.jpg"
-            alt="Code Kshetra"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_hackathon-geekroom-codekshetra-activity-7168880844697260032-3uO-?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/aws cloud.jpg"
-            alt="AWS Cloud"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_cloudcomputing-aws-cloudlearning-activity-7178287059948777475-PBI2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/android fuelling innovation.jpg"
-            alt="Android Innovation"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_androiddevelopment-techeducation-sachinsaxena-activity-7183720402894925825-eS9w?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-
-        <div class="certificate" style="text-align: center">
-          <img
-            src="../Data/images/Certificates/Chess 2nd Rank University Level.png"
-            alt="Chess 2nd Rank University Level"
-          />
-          <br />
-          <a
-            href="https://www.linkedin.com/posts/infashish_chess-achievement-shobhituniversity-activity-7294020609615745025-AVql?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrMsgBEzaE6izdQL0FmqcI5I-AAs9Yb2g"
-            target="_blank"
-            class="view-post-link"
-          >
-            <i class="fab fa-linkedin"></i> View Post
-          </a>
-        </div>
-      </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section class="section certifications-section">
+        <div class="section-container">
+            <h2 class="section-title center reveal"><span class="gradient-text">Certifications</span></h2>
+            <p class="section-subtitle reveal">Click on any certificate to zoom in</p>
+
+            <div class="cert-grid reveal-stagger">
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/AI Data Engineer.jpg" alt="AI Data Engineer" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_ai-dataengineer-reliancefoundation-activity-7355220916286447617-RyuF" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/Data Manager intern.jpg" alt="Data Manager Internship" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_internship-dataanalytics-python-activity-7358415880667500544-eBGZ" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/firstrankincoderhunt.jpg" alt="Coder Hunt First Rank" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_python-coding-achievement-activity-7234953974066339842-fH2h" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/Internal SiH 2025 1st rank.png" alt="Internal SIH 1st Rank" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_sih2025-hackathon-innovation-activity-7372956928739586048-s_QN" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/36-hour journey at Hack Heist! 🚀 Top 10 Rank.png" alt="Hack Heist Top 10" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_hackheist-hackathonexerience-miet-activity-7313273174152867840-NeQ_" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/TechUdyam Hackathon hosted by MIET.png" alt="TechUdyam Hackathon" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_hackathon-techudyam-teamwork-activity-7249976779589726209-kTCA" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/'Innovating with Generative AI.png" alt="Generative AI" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_generativeai-shobhituniversity-aiinnovation-activity-7243767942658588672-EMhP" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/React js.jpg" alt="React Workshop" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_reactjs-webdevelopment-professionalgrowth-activity-7207785934417715200-pojB" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/Iot workshop.jpg" alt="IoT Workshop" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_iot-python-raspberrypi-activity-7207415603517640704-tbTA" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/internal sih 2023.jpg" alt="Internal SIH 2023" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_firstcollegecertificate-smartindiahackathon2023-activity-7139540944189644800-rG4r" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/Cybersecurity.jpg" alt="Cybersecurity" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_cybersecurity-techmahindra-skillsindia-activity-7220747702978891776--_ar" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/code kshetra hackathon.jpg" alt="Code Kshetra" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_hackathon-geekroom-codekshetra-activity-7168880844697260032-3uO-" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/aws cloud.jpg" alt="AWS Cloud" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_cloudcomputing-aws-cloudlearning-activity-7178287059948777475-PBI2" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/android fuelling innovation.jpg" alt="Android Innovation" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_androiddevelopment-techeducation-sachinsaxena-activity-7183720402894925825-eS9w" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <img src="../Data/images/Certificates/Chess 2nd Rank University Level.png" alt="Chess 2nd Rank" class="cert-img">
+                    <a href="https://www.linkedin.com/posts/infashish_chess-achievement-shobhituniversity-activity-7294020609615745025-AVql" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> View Post</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Zoom Modal -->
     <div id="imageModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01" />
-      <div id="caption"></div>
+        <span class="modal-close">&times;</span>
+        <img class="modal-image" id="modalImg">
+        <div id="modalCaption"></div>
     </div>
 
     <script src="script.js"></script>
-  </body>
+    <script src="../chatbot/aksh.js"></script>
+</body>
 </html>
