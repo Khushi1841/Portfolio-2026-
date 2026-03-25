@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Download CV</title>
+    <link rel="stylesheet" href="resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Data/images/logo-Photoroom.png" alt="Logo">
+            <span>Ashish Kumar</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../about/about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="../Project/project.html"><i class="fas fa-briefcase"></i> Projects</a></li>
+                <li><a href="../Resume/resume.html"><i class="fas fa-file-alt"></i> Resume</a></li>
+                <li><a href="https://github.com/Aashiskr"><i class="fab fa-github"></i>Github</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Video background -->
+        <video autoplay muted loop id="background-video">
+            <source src="../Data/Earth Spinning in Space _ Royalty Free _ Stock footage _ Free HD Videos - No Copyright.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <section id="download-section">
+            <h1>Ashish Kumar</h1>
+            <a href="../Data/Ashish Resume (inf_ashish) ,.pdf" download class="download-btn">Download CV</a>
+            <p id="error-message" style="display: none;">Failed to load PDF file.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p><marquee>Copyright © 2026 Ashish Kumar</marquee></p>
+    </footer>
+
+    <script src="resume.js"></script>
+</body>
+</html>

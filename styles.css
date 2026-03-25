@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('Data/images/images.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  height: 70px;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 80px);
+  padding: 0 50px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.hero-text .highlight {
+  color: #ffd700;
+}
+
+.hero-text h3 {
+  font-size: 2rem;
+}
+
+.hero-image img {
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0
+}
+
+.wave {
+  animation: wave-animation 2.5s infinite;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-15deg); }
+  40% { transform: rotate(10deg); }
+  60% { transform: rotate(-15deg); }
+  80% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+footer {
+  background-color: #1a1a2e;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  color: #c1c1c1;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0077b5; /* Change this to fit the hover effect you prefer */
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+footer .footer-bottom p {
+  margin: 0;
+}

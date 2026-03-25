@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1A1A40;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: 70px;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 100px;
+    padding-right: 50px;
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-content h2 span {
+    color: #ffae00;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+.about-content ul {
+    list-style: none;
+}
+
+.about-content ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.about-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-content h1 span {
+    color: #737373;
+}
+
+.about-content strong {
+    color: #00FFAB;
+}
+
+.image img {
+    width: 447px;
+    animation: float 3s ease-in-out infinite;
+    margin-top: -400px;
+}
+
+.about-image img {
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+    max-width: 250px;
+    max-height: 400px;
+    border: 5px solid #00FFAB;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.skills {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.skills h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.skills h2 span {
+    color: #ffae00;
+}
+
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.icon-box {
+    background-color: #161616;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.icon-box:hover {
+    transform: scale(1.1);
+    border-color: #ffae00;
+}
+
+.icon-box img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+.icon-box p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Certifications AND Achievements Sections */
+.certifications, .achievements {
+    padding: 50px;
+    text-align: center;
+}
+
+.certifications h2, .achievements h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Added span color for headings */
+.certifications h2 span, .achievements h2 span {
+    color: #ffae00;
+}
+
+.certificates-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.certificate {
+    background-color: #1c1b33;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.certificate img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.certificate img:hover {
+    transform: scale(1.05);
+}
+
+.view-post-link {
+    color: #00BFFF;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.view-post-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .skill-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .icon-box {
+        margin-bottom: 15px;
+    }
+    .about {
+        flex-direction: column;
+        margin-left: 20px;
+        padding: 20px;
+    }
+    .about-content {
+        max-width: 100%;
+    }
+    .image img {
+        margin-top: 0;
+        margin-right: 0;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Zoom Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #00FFAB;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #00FFAB;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+/* --- FIXED SIZE FOR ACHIEVEMENT IMAGES --- */
+.achievements .certificate img {
+    width: 300px;       /* Fixed Width */
+    height: 220px;      /* Fixed Height */
+    object-fit: cover;  /* This ensures the image fills the box without stretching/distorting */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* --- DESCRIPTION TEXT STYLE --- */
+.achievement-desc {
+    font-size: 0.9rem;
+    color: #ccc;        /* Light grey text */
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 0 10px;    /* Slight padding on sides */
+    line-height: 1.4;
+    max-width: 300px;   /* Keeps text aligned with image width */
+    margin-left: auto;
+    margin-right: auto;
+}
