@@ -3,137 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashish Kumar — Developer, Builder, Innovator</title>
-    <meta name="description" content="Portfolio of Ashish Kumar — Full Stack Developer, Data Science Student, and GATE 2026 Qualified. Building intelligent apps with Python, Flutter, React, and more.">
-    <meta property="og:title" content="Ashish Kumar — Developer, Builder, Innovator">
-    <meta property="og:description" content="Full Stack Developer & Data Science Student. GATE 2026 Qualified. Building the future with code.">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="styles.css">
+    <title>Khushi Kumari | Developer & Data Science Student</title>
+    <meta name="description" content="Portfolio of Khushi Kumari — Data Science student & Full Stack Developer. Building intelligent apps with AI, Python, and React.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="dark-theme">
+
 
     <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-        <div class="loader-spinner"></div>
+    <div class="loader-wrapper" id="loader">
+        <div class="loader-content">
+            <div class="loader-text">KHUSHI</div>
+            <div class="loader-bar"></div>
+        </div>
     </div>
 
-    <!-- Animated Background -->
-    <div class="bg-animated"></div>
-    <canvas id="particles-canvas"></canvas>
+    <!-- Background Elements -->
+    <div class="bg-gradient"></div>
+    <canvas id="canvas-dots"></canvas>
 
     <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="Data/images/logo-Photoroom.png" alt="Ashish Kumar Logo">
-                <span>Ashish Kumar</span>
+    <nav class="nav-glass" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="Data/images/logo-Photoroom.png" alt="Khushi Logo" style="width: 45px; height: 45px; object-fit: contain; transform: translateY(-2px);">
+                <span class="logo-text">KHUSHI.</span>
             </a>
-
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" class="active"><i class="fas fa-home"></i>Home</a>
-                <a href="about/about.html"><i class="fas fa-user"></i>About</a>
-                <a href="Project/project.html"><i class="fas fa-briefcase"></i>Projects</a>
-                <a href="Resume/resume.html"><i class="fas fa-file-alt"></i>Resume</a>
-                <a href="Contact/contact.html"><i class="fas fa-envelope"></i>Contact</a>
-                <a href="https://github.com/Aashiskr" target="_blank" class="nav-github"><i class="fab fa-github"></i>GitHub</a>
+            
+            <div class="nav-links" id="nav-menu">
+                <a href="index.html" class="nav-pill active"><i class="fas fa-home"></i> Home</a>
+                <a href="about/index.html" class="nav-pill"><i class="fas fa-user"></i> About</a>
+                <a href="Project/index.html" class="nav-pill"><i class="fas fa-briefcase"></i> Experience</a>
+                <a href="Resume/index.html" class="nav-pill"><i class="fas fa-project-diagram"></i> Projects</a>
+                <a href="Contact/index.html" class="nav-pill"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="https://github.com/Khushi1841" target="_blank" class="nav-pill github-btn"><i class="fab fa-github"></i> GitHub</a>
             </div>
 
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="dot"></span>
-                    Available for opportunities
-                </div>
-
-                <p class="hero-greeting">Hi there! <span class="wave">👋</span></p>
-
-                <h1 class="hero-name">
-                    I'm <span class="gradient-text">Ashish Kumar</span>
-                </h1>
-
-                <div class="hero-typewriter-wrapper">
-                    <span class="typed-text" id="typewriter"></span><span class="cursor"></span>
-                </div>
-
-                <p class="hero-description">
-                    Data Science student & Full Stack Developer crafting intelligent applications.
-                    GATE 2026 Qualified. Pushing the boundaries of code every day.
-                </p>
-
-                <div class="hero-cta">
-                    <a href="Project/project.html" class="btn-primary">
-                        <i class="fas fa-rocket"></i> View My Work
-                    </a>
-                    <a href="Resume/resume.html" class="btn-secondary">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                </div>
-            </div>
-
-            <div class="hero-visual">
-                <div class="avatar-container">
-                    <div class="avatar-ring"></div>
-                    <div class="avatar-image">
-                        <img src="Data/images/ashis.jpg" alt="Ashish Kumar">
+    <main>
+        <section class="hero-sec section-active" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-info">
+                    <div class="badge-premium reveal">
+                        <span class="badge-dot pulse"></span>
+                        Available for opportunities
                     </div>
-                    <div class="orbit-dot"></div>
-                    <div class="orbit-dot"></div>
-                    <div class="orbit-dot"></div>
+                    <div class="hero-greeting reveal">Hi there! 👋</div>
+                    <h1 class="hero-heading reveal">
+                        I'm <span class="gradient-text">Khushi Kumari</span>
+                    </h1>
+                    <h2 class="hero-role reveal">
+                        <span class="typewriter">Full Stack Developer|</span>
+                    </h2>
+                    <p class="hero-subtext reveal">
+                        Data Science student & Full Stack Developer crafting intelligent applications. Pushing the boundaries of code every day.
+                    </p>
+                    <div class="hero-actions reveal">
+                        <a href="Resume/index.html" class="btn-glow"><i class="fas fa-rocket"></i> View My Work</a>
+                        <a href="Data/images/Khushi Kumari Resume(2026).pdf" download class="btn-outline"><i class="fas fa-download"></i> Download CV</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal">
+                    <div class="profile-wrapper">
+                        <div class="glow-border"></div>
+                        <div class="profile-circle">
+                            <img src="Data/images/me.jpg" alt="Khushi Kumari">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section reveal">
-        <div class="stats-grid reveal-stagger">
-            <div class="stat-card">
-                <div class="stat-number" data-count="15">0</div>
-                <div class="stat-label">Projects Built</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" data-count="7">0</div>
-                <div class="stat-label">Hackathons</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" data-count="14">0</div>
-                <div class="stat-label">Certifications</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" data-count="2">0</div>
-                <div class="stat-label">Internships</div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <h3>Let's Connect</h3>
-            <p>Feel free to reach out — I'm always open to new ideas and collaborations.</p>
+        <!-- Stats Strip -->
+        <section class="stats-strip">
+            <div class="container stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-label">PROJECTS BUILT</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="6">0</span><span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-label">HACKATHONS</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="13">0</span><span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-label">CERTIFICATIONS</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="1">0</span><span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-label">INTERNSHIPS</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-connect">
+        <div class="footer-gradient-line"></div>
+        <div class="container footer-content">
+            <h2 class="footer-title">Let's Connect</h2>
+            <p class="footer-subtext">Feel free to reach out — I'm always open to new ideas and collaborations.</p>
             <div class="footer-socials">
-                <a href="https://github.com/Aashiskr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/infashish" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/inf._.ashish/profilecard/?igsh=bDFtMGs5bzZscHdt" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Khushi1841" target="_blank" class="social-circle"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/khushi41" target="_blank" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Ashish Kumar. Designed with ❤️ and code.</p>
+            <p>&copy; 2026 Khushi Kumari. Designed with <i class="fas fa-heart" style="color: #ff4757;"></i> and code.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Bot Integration -->
     <script src="chatbot/aksh.js"></script>
+    <!-- 3D Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

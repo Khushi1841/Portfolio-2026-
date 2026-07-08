@@ -1,0 +1,147 @@
+/* Local styles for Resume/Experience page */
+
+.timeline-wrapper {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent-violet), var(--accent-emerald), var(--accent-azure));
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+    border-radius: 50px;
+}
+
+.event-dot {
+    box-shadow: 0 0 20px var(--accent-violet);
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0% { box-shadow: 0 0 10px var(--accent-violet); }
+    50% { box-shadow: 0 0 25px var(--accent-violet); }
+    100% { box-shadow: 0 0 10px var(--accent-violet); }
+}
+
+.event-content.glass-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border-left: 4px solid transparent;
+}
+
+.event-content.glass-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+    border-left: 4px solid var(--accent-violet);
+}
+
+/* Achievement Grid */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+.ach-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    transition: var(--transition);
+}
+.ach-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+.ach-img-wrapper {
+    width: 140px;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid var(--border-glass);
+}
+.ach-img-wrapper img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+.ach-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ach-info h3 {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+}
+.ach-info p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+.linkedin-link {
+    color: #3b82f6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+.linkedin-link:hover {
+    color: #60a5fa;
+    text-decoration: underline;
+}
+
+/* Certifications Grid */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.cert-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition);
+}
+.cert-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+.cert-img-wrapper {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-glass);
+}
+.cert-img-wrapper img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.cert-card:hover .cert-img-wrapper img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .achievements-grid { grid-template-columns: 1fr; }
+    .cert-grid { grid-template-columns: 1fr; }
+    .ach-card { flex-direction: column; }
+    .ach-img-wrapper { width: 100%; height: 180px; }
+}
