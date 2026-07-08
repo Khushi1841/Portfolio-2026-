@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khushi Kumari | AI & Full Stack Developer</title>
-    <meta name="description" content="Portfolio of Khushi Kumari - Data Science student and Full Stack Developer building intelligent apps with AI, Python, and React.">
-
+    <title>Khushi Kumari | Developer & Data Science Student</title>
+    <meta name="description" content="Portfolio of Khushi Kumari — Data Science student & Full Stack Developer. Building intelligent apps with AI, Python, and React.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-theme">
-    <div id="custom-cursor"></div>
-    <div id="cursor-blur"></div>
 
+
+    <!-- Page Loader -->
     <div class="loader-wrapper" id="loader">
         <div class="loader-content">
             <div class="loader-text">KHUSHI</div>
@@ -23,26 +27,29 @@
         </div>
     </div>
 
+    <!-- Background Elements -->
     <div class="bg-gradient"></div>
     <canvas id="canvas-dots"></canvas>
 
+    <!-- Navbar -->
     <nav class="nav-glass" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="Data/images/logo-Photoroom.png" alt="Khushi Logo" class="logo-img">
+                <img src="Data/images/logo-Photoroom.png" alt="Khushi Logo" style="width: 45px; height: 45px; object-fit: contain; transform: translateY(-2px);">
                 <span class="logo-text">KHUSHI.</span>
             </a>
-
+            
             <div class="nav-links" id="nav-menu">
                 <a href="index.html" class="nav-pill active"><i class="fas fa-home"></i> Home</a>
                 <a href="about/index.html" class="nav-pill"><i class="fas fa-user"></i> About</a>
                 <a href="Project/index.html" class="nav-pill"><i class="fas fa-briefcase"></i> Experience</a>
                 <a href="Resume/index.html" class="nav-pill"><i class="fas fa-project-diagram"></i> Projects</a>
                 <a href="Contact/index.html" class="nav-pill"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="https://github.com/Khushi1841" target="_blank" class="nav-pill github-btn"><i class="fab fa-github"></i> GitHub</a>
             </div>
 
-            <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
-                <span></span><span></span>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
@@ -53,22 +60,21 @@
                 <div class="hero-info">
                     <div class="badge-premium reveal">
                         <span class="badge-dot pulse"></span>
-                        Available for internships, freelance work, and collaborations
+                        Available for opportunities
                     </div>
-                    <div class="hero-greeting reveal">Hi, I build useful software from messy ideas.</div>
+                    <div class="hero-greeting reveal">Hi there! 👋</div>
                     <h1 class="hero-heading reveal">
-                        Khushi Kumari, <span class="gradient-text">AI-minded full stack developer</span>
+                        I'm <span class="gradient-text">Khushi Kumari</span>
                     </h1>
                     <h2 class="hero-role reveal">
-                        <span class="typewriter">Full Stack Developer</span>
+                        <span class="typewriter">Full Stack Developer|</span>
                     </h2>
                     <p class="hero-subtext reveal">
-                        Data Science student from Meerut building AI assistants, ML dashboards, and full-stack products that turn real problems into usable tools.
+                        Data Science student & Full Stack Developer crafting intelligent applications. Pushing the boundaries of code every day.
                     </p>
                     <div class="hero-actions reveal">
                         <a href="Resume/index.html" class="btn-glow"><i class="fas fa-rocket"></i> View My Work</a>
                         <a href="Data/images/Khushi Kumari Resume(2026).pdf" download class="btn-outline"><i class="fas fa-download"></i> Download CV</a>
-                        <a href="https://www.linkedin.com/in/khushi-kumari-01" target="_blank" class="btn-quiet"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
                     </div>
                 </div>
 
@@ -82,105 +88,34 @@
                 </div>
             </div>
 
-            <div class="scroll-indicator">
-                <div class="mouse"><div class="wheel"></div></div>
-            </div>
         </section>
 
+        <!-- Stats Strip -->
         <section class="stats-strip">
             <div class="container stats-grid">
                 <div class="stat-item reveal">
-                    <div class="stat-number-wrapper"><span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span></div>
-                    <div class="stat-label">Projects Built</div>
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-label">PROJECTS BUILT</div>
                 </div>
                 <div class="stat-item reveal">
-                    <div class="stat-number-wrapper"><span class="stat-number" data-target="6">0</span><span class="stat-plus">+</span></div>
-                    <div class="stat-label">Hackathons</div>
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="6">0</span><span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-label">HACKATHONS</div>
                 </div>
                 <div class="stat-item reveal">
-                    <div class="stat-number-wrapper"><span class="stat-number" data-target="13">0</span><span class="stat-plus">+</span></div>
-                    <div class="stat-label">Certifications</div>
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="13">0</span><span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-label">CERTIFICATIONS</div>
                 </div>
                 <div class="stat-item reveal">
-                    <div class="stat-number-wrapper"><span class="stat-number" data-target="1">0</span><span class="stat-plus">+</span></div>
-                    <div class="stat-label">Internships</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="home-section">
-            <div class="container section-head split-head">
-                <div>
-                    <span class="section-tag reveal">Featured Work</span>
-                    <h2 class="section-title reveal">Projects with proof, polish, and purpose</h2>
-                </div>
-                <a href="Resume/index.html" class="btn-more reveal">Explore all projects <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="container feature-grid reveal-stagger">
-                <article class="feature-card">
-                    <img src="Data/images/Projects/Aksh1.png" alt="Altron AI voice assistant interface">
-                    <div class="feature-content">
-                        <span class="feature-kicker">AI Assistant</span>
-                        <h3>Altron</h3>
-                        <p>Python voice assistant for desktop automation, created for practical workflows and innovation showcases.</p>
-                        <div class="project-tags"><span>Python</span><span>AI</span><span>Automation</span></div>
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="1">0</span><span class="stat-plus">+</span>
                     </div>
-                </article>
-
-                <article class="feature-card">
-                    <img src="Data/images/Projects/Notes App/university achievement System.png" alt="University Achievement System dashboard">
-                    <div class="feature-content">
-                        <span class="feature-kicker">Full Stack</span>
-                        <h3>University Achievement System</h3>
-                        <p>Achievement and faculty data management platform that makes institutional records easier to track and present.</p>
-                        <div class="project-tags"><span>React</span><span>Node.js</span><span>CRUD</span></div>
-                    </div>
-                </article>
-
-                <article class="feature-card">
-                    <img src="Data/images/Projects/cricket_score_predict.png" alt="IPL score prediction app">
-                    <div class="feature-content">
-                        <span class="feature-kicker">Machine Learning</span>
-                        <h3>IPL Score Predictor</h3>
-                        <p>Streamlit and XGBoost web app for predicting first-innings cricket scores from live match context.</p>
-                        <div class="project-tags"><span>ML</span><span>XGBoost</span><span>Streamlit</span></div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="home-section proof-section">
-            <div class="container proof-layout">
-                <div class="proof-copy reveal">
-                    <span class="section-tag">Recent Highlights</span>
-                    <h2 class="section-title">Signals from hackathons, internships, and shipped builds</h2>
-                    <p>
-                        This section is ready to be tuned from your LinkedIn posts once you share access or exported post content. For now it reflects the strongest portfolio facts already present in the project.
-                    </p>
-                </div>
-                <div class="highlight-list reveal-stagger">
-                    <div class="highlight-item">
-                        <i class="fas fa-trophy"></i>
-                        <div>
-                            <h3>Project Expo 2025 - 1st Rank</h3>
-                            <p>Recognized for Altron, an AI assistant built around practical automation.</p>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-chart-line"></i>
-                        <div>
-                            <h3>Data Analytics Internship</h3>
-                            <p>Worked with Webflow interfaces, Python analysis, and structured organizational data.</p>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-code-branch"></i>
-                        <div>
-                            <h3>Multi-domain Builder</h3>
-                            <p>Projects span AI, ML, web dashboards, accessibility, Chrome extensions, and mobile apps.</p>
-                        </div>
-                    </div>
+                    <div class="stat-label">INTERNSHIPS</div>
                 </div>
             </div>
         </section>
@@ -190,18 +125,21 @@
         <div class="footer-gradient-line"></div>
         <div class="container footer-content">
             <h2 class="footer-title">Let's Connect</h2>
-            <p class="footer-subtext">Feel free to reach out - I'm always open to new ideas and collaborations.</p>
+            <p class="footer-subtext">Feel free to reach out — I'm always open to new ideas and collaborations.</p>
             <div class="footer-socials">
-                <a href="https://github.com/Khushi1841" target="_blank" class="social-circle" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/khushi-kumari-01" target="_blank" class="social-circle" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Khushi1841" target="_blank" class="social-circle"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/khushi41" target="_blank" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Khushi Kumari. Designed with care and code.</p>
+            <p>&copy; 2026 Khushi Kumari. Designed with <i class="fas fa-heart" style="color: #ff4757;"></i> and code.</p>
         </div>
     </footer>
 
+    <!-- Bot Integration -->
     <script src="chatbot/aksh.js"></script>
+    <!-- 3D Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

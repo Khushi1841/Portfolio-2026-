@@ -165,37 +165,3 @@
   border-color: var(--accent-violet);
   transform: translateX(5px);
 }
-
-/* Local polish for the 2026 redesign */
-.about-layout {
-  gap: clamp(36px, 7vw, 84px);
-}
-
-.glow-border-about {
-  background: linear-gradient(135deg, rgba(255,122,89,0.95), rgba(45,212,191,0.84));
-  filter: none;
-  animation: none;
-}
-
-.floating-badge {
-  border-radius: 8px;
-  background: rgba(8, 9, 12, 0.82);
-  border-color: var(--border-glass);
-}
-
-.floating-badge i,
-.fb-2 i {
-  color: var(--accent-gold);
-}
-
-.interactive-card:hover,
-.about-points li:hover {
-  transform: translateY(-5px);
-  border-color: rgba(255,122,89,0.34);
-}
-
-.about-points li {
-  background: rgba(255,255,255,0.045);
-  border-color: var(--border-glass);
-  border-radius: 8px;
-}

@@ -44,14 +44,26 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('mobile-active');
-            menuToggle.classList.toggle('is-open', navMenu.classList.contains('mobile-active'));
+            if (navMenu.classList.contains('mobile-active')) {
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '100%';
+                navMenu.style.left = '0';
+                navMenu.style.width = '100%';
+                navMenu.style.background = 'rgba(3, 3, 5, 0.98)';
+                navMenu.style.padding = '40px';
+                navMenu.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+            } else {
+                navMenu.style.display = '';
+            }
         });
     }
 
     // 5. Typewriter Effect (Hero page only)
     const typewriterElement = document.querySelector('.typewriter');
     if (typewriterElement) {
-        const roles = ["Full Stack Developer", "Data Science Student", "AI Builder", "Machine Learning Explorer"];
+        const roles = ["Full Stack Developer", "Data Science Student", "AI Enthusiast", "Open Source Contributor"];
         let roleIndex = 0, charIndex = 0, isDeleting = false, typeSpeed = 100;
 
         function type() {
@@ -115,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = 'rgba(246, 196, 83, 0.22)';
+            ctx.fillStyle = 'rgba(139, 92, 246, 0.3)';
             dots.forEach(dot => {
                 dot.x += dot.vx;
                 dot.y += dot.vy;
@@ -166,33 +178,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 9. Certificate cards from shared data
-    const certificateTracks = document.querySelectorAll('[data-certificates]');
-    const certificates = window.PORTFOLIO_CERTIFICATES || [];
-    if (certificateTracks.length > 0 && certificates.length > 0) {
-        certificateTracks.forEach(track => {
-            const prefix = track.getAttribute('data-asset-prefix') || '';
-            track.innerHTML = certificates.map(cert => {
-                const imagePath = prefix + cert.image;
-                const postButton = cert.postUrl
-                    ? `<a class="cert-post-btn" href="${cert.postUrl}" target="_blank" rel="noopener">View Post <i class="fab fa-linkedin-in"></i></a>`
-                    : `<span class="cert-post-btn disabled" title="Add this certificate's LinkedIn post URL in Data/certificates.js">Post Link Needed</span>`;
+    // 9. 3D Tilt Animations
+    if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll(".profile-wrapper"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.3,
+            scale: 1.05
+        });
 
-                return `
-                    <article class="cert-card">
-                        <img src="${imagePath}" alt="${cert.title}">
-                        <div class="cert-card-body">
-                            <h3>${cert.title}</h3>
-                            ${postButton}
-                        </div>
-                    </article>
-                `;
-            }).join('');
-
-            if (!track.dataset.cloned) {
-                track.innerHTML += track.innerHTML;
-                track.dataset.cloned = 'true';
-            }
+        VanillaTilt.init(document.querySelectorAll(".stat-item"), {
+            max: 10,
+            speed: 300,
+            glare: true,
+            "max-glare": 0.2,
+            scale: 1.05
         });
     }
 });

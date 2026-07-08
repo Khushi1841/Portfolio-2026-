@@ -42,6 +42,7 @@
                 <a href="../Project/index.html" class="nav-pill"><i class="fas fa-briefcase"></i> Experience</a>
                 <a href="../Resume/index.html" class="nav-pill"><i class="fas fa-project-diagram"></i> Projects</a>
                 <a href="../Contact/index.html" class="nav-pill"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="https://github.com/Khushi1841" target="_blank" class="nav-pill github-btn"><i class="fab fa-github"></i> GitHub</a>
             </div>
 
             <button class="menu-toggle" id="menu-toggle">
@@ -50,10 +51,13 @@
         </div>
     </nav>
 
-    <main style="padding-top: 120px;">
+    <main style="padding-top: 40px;">
         <!-- About Section (No longer hidden, acting as main page) -->
         <section class="sec-padding section-active" id="about">
             <div class="container section-head center">
+                <div class="reveal" style="margin-bottom: 24px;">
+                    <img src="../Data/images/me.jpg" alt="Khushi Kumari" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin: 0 auto; border: 3px solid var(--accent-cyan); box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);">
+                </div>
                 <span class="section-tag reveal">About Me</span>
                 <h2 class="section-title reveal">Bridging Data Science & <span class="gradient-text">Development</span></h2>
             </div>
@@ -61,7 +65,7 @@
             <div class="container about-layout">
                 <div class="about-content reveal">
                     <p class="p-large">
-                        I am a dedicated <strong>Bachelor of Technology</strong> student from Meerut, India, specializing in building intelligent, scalable applications.
+                        I am a dedicated <strong>Bachelor of Science in Computer Science</strong> student from Meerut, India, specializing in building intelligent, scalable applications.
                     </p>
                     <p>
                         My journey is driven by a curiosity for how data can transform the way we interact with technology. Whether it's developing AI-powered virtual assistants or crafting seamless cross-platform mobile apps with Flutter, I thrive on solving complex problems with elegant code.
@@ -83,7 +87,7 @@
                             <i class="fas fa-graduation-cap"></i>
                             <h3>Education</h3>
                         </div>
-                        <p><strong>Bachelor of Technology</strong></p>
+                        <p><strong>Bachleor of Technology</strong></p>
                         <p class="text-muted">Shobhit Institute of Engineering & Technology</p>
                         <hr>
                         <div class="info-header">
@@ -100,39 +104,24 @@
                 <h2 class="section-title reveal">Professional <span class="gradient-text">Skillset</span></h2>
             </div>
             
-            <div class="container skills-flex reveal-stagger">
-                <!-- Data Science & Analytics -->
-                <div class="skill-category">
-                    <h3>Data & AI</h3>
-                    <div class="skill-tags">
-                        <div class="skill-tag-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> <span>Python</span></div>
-                        <div class="skill-tag-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"> <span>Pandas</span></div>
-                        <div class="skill-tag-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"> <span>NumPy</span></div>
-                        <div class="skill-tag-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib"> <span>Matplotlib</span></div>
-                    </div>
-                </div>
-
-                <!-- Web Development -->
-                <div class="skill-category">
-                    <h3>Web Stack</h3>
-                    <div class="skill-tags">
-                        <div class="skill-tag-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"> <span>React.js</span></div>
-                        <div class="skill-tag-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="dark-invert"> <span>Next.js</span></div>
-                        <div class="skill-tag-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"> <span>Node.js</span></div>
-                        <div class="skill-tag-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind"> <span>Tailwind</span></div>
-                    </div>
-                </div>
-
-                <!-- Languages & Tools -->
-                <div class="skill-category">
-                    <h3>Languages & Mobile</h3>
-                    <div class="skill-tags">
-                        <div class="skill-tag-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS"> <span>JS</span></div>
-                        <div class="skill-tag-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"> <span>C++</span></div>
-                        <div class="skill-tag-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"> <span>Flutter</span></div>
-                        <div class="skill-tag-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="Dart"> <span>Dart</span></div>
-                    </div>
-                </div>
+            <div class="container skills-grid-container reveal-stagger">
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"><span>C++</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"><span>C</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"><span>TypeScript</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"><span>Flutter</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js"><span>React.js</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="dark-invert"><span>Next.js</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"><span>NumPy</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"><span>Pandas</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"><span>Figma</span></div>
+                <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg" alt="Webflow"><span>Webflow</span></div>
             </div>
         </section>
     </main>
@@ -141,14 +130,14 @@
         <div class="footer-gradient-line"></div>
         <div class="container footer-content">
             <h2 class="footer-title">Let's Connect</h2>
-            <p class="footer-subtext">Feel free to reach out - I'm always open to new ideas and collaborations.</p>
+            <p class="footer-subtext">Feel free to reach out — I'm always open to new ideas and collaborations.</p>
             <div class="footer-socials">
                 <a href="https://github.com/Khushi1841" target="_blank" class="social-circle"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/khushi-kumari-01" target="_blank" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/khushi41" target="_blank" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Khushi Kumari. Designed with care and code.</p>
+            <p>&copy; 2026 Khushi Kumari. Designed with <i class="fas fa-heart" style="color: #ff4757;"></i> and code.</p>
         </div>
     </footer>
 

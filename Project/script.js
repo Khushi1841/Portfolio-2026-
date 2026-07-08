@@ -2,6 +2,14 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Auto-scroll certificate slider
+    const certTrack = document.querySelector('.cert-track');
+    if (certTrack) {
+        // Clone items for infinite loop effect
+        const items = certTrack.innerHTML;
+        certTrack.innerHTML += items;
+    }
+
     // Animate achievement boxes on scroll
     const achBoxes = document.querySelectorAll('.ach-box');
     const achObserver = new IntersectionObserver((entries) => {
