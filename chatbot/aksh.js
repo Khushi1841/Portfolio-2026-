@@ -4,26 +4,31 @@
    ============================================ */
 
 (function() {
-  // --- Detect avatar path based on current page location ---
-  const pathParts = window.location.pathname.split('/').filter(Boolean);
-  const isSubfolder = pathParts.length > 1;
-  const avatarPath = isSubfolder ? '../chatbot/aksh-avatar.png' : 'chatbot/aksh-avatar.png';
+  // --- Detect avatar path (simplified for SPA root) ---
+  const scripts = document.getElementsByTagName('script');
+  let basePath = '';
+  for (let script of scripts) {
+      if (script.src.includes('aksh.js')) {
+          basePath = script.getAttribute('src').replace('chatbot/aksh.js', '');
+          break;
+      }
+  }
+  const avatarPath = basePath + 'chatbot/aksh-avatar.png';
 
   // --- Voice State ---
   let isVoiceEnabled = true;
 
-  // --- Ashish's Knowledge Base ---
+  
   const K = {
-    name: "Ashish Kumar",
+    name: "Khushi Kumari",
     location: "Modipuram, Meerut, India",
     education: "B.Tech CSE (Data Science) at Shobhit University",
-    currentRole: "Intern at INNextIn | CTO at NextGen Tech Connect",
-    phone: "+91 6206634194",
-    emails: ["ar6858439@gmail.com", "infashish@zohomail.in"],
-    github: "https://github.com/Aashiskr",
-    linkedin: "https://www.linkedin.com/in/infashish",
-    instagram: "https://www.instagram.com/inf._.ashish/",
-    hobbies: ["Playing Chess (2nd Rank University Level)", "Exploring Food"],
+    currentRole: "Intern at INNextIn",
+    phone: "+91 9113329839",
+    emails: ["khushisingh80139@gmail.com"],
+    github: "https://github.com/Khushi1841",
+    linkedin: "https://www.linkedin.com/in/khushi41",
+    hobbies: ["Playing Badminton", "Exploring Food"],
     skills: {
       languages: ["Python", "Dart", "R", "C++", "C", "JavaScript", "TypeScript", "PHP"],
       frameworks: ["Flutter", "React.js", "Next.js", "Node.js"],
@@ -31,21 +36,16 @@
       tools: ["Git", "Figma", "Webflow"]
     },
     achievements: [
-      "GATE 2026 Qualified (AIR 12467)",
       "Data Manager Intern at Dezign Bank",
-      "Azure 101 Quiz — 2nd Rank",
       "Project Expo 2025 — 1st Rank",
       "Internal SIH 2025 — 1st Rank",
-      "SU Code Hunt 2024 — 1st Place (Python)",
-      "GDG Hack Heist — Top 5",
-      "Chess 2nd Rank University Level"
+      "SU Code Hunt 2024 — 3rd Place (Python)",
+      "GDG Hack Heist — Top 5"
     ],
     projects: {
-      "NextGen Tech Connect": { desc: "Yeah ek amazing community platform hai Agentic AI enthusiasts ke liye. Ashish isme CTO hain aur saara development lead kar rahe hain.", url: "nextgen-tech-connect.vercel.app" },
-      "Zelectronics": { desc: "Zelectronics ek modern e-commerce platform hai electronics ke liye. Ye Ashish ka ek freelance project tha jisme unhone pura custom frontend banaya hai.", url: "zelectronics.vercel.app" },
-      "DezignBank": { desc: "DezignBank ek architectural design platform hai. Ashish ne yahan as a Data Manager Intern kaam kiya tha, architecture data aur models manage karne ke liye.", url: "dezignbank.com" },
+      "DezignBank": { desc: "DezignBank ek architectural design platform hai. Khushi ne yahan as a Data Manager Intern kaam kiya tha, architecture data aur models manage karne ke liye.", url: "dezignbank.com" },
       "Aksh English": { desc: "Ye ek bahut hi badhiya Flutter app hai English seekhne ke liye! Isme AI voice interaction hai, jisse aap baat karke practice kar sakte ho aur apna hesitation door kar sakte ho.", url: "aksh-english-web.vercel.app" },
-      "A-Lens": { desc: "A-Lens ek universal aur ad-free document viewer hai (PDF, PPT, DOCX). Ashish ne isme Android smart boards ke liye custom PPT rendering likha hai, jo ki bahut complex hai!" },
+      "A-Lens": { desc: "A-Lens ek universal aur ad-free document viewer hai (PDF, PPT, DOCX). Khushi ne isme Android smart boards ke liye custom PPT rendering likha hai, jo ki bahut complex hai!" },
       "Notes App": { desc: "Ye ek simple aur distraction-free notes app hai Flutter me bana hua. Isme data safely aapke local device storage me save hota hai." },
       "Vehicle Rental System": { desc: "Ye vehicles rent karne ke liye ek complete full-stack management system hai. Isme system bookings, fleet aur customers sab ek saath handle karta hai.", url: "vehicle-rental-management-system-project.vercel.app" },
       "Talent Management System": { desc: "Ye ek hackathon project tha jiska main aim talented logo aur companies/opportunities ke beech ka gap mitaana tha.", url: "talent-bridge-factory.vercel.app" },
@@ -58,14 +58,13 @@
       "Telco Customer Churn": { desc: "Ye ek ML dashboard hai jisko R aur Shiny me banaya gaya tha. Ye Random Forest use karke un customers ko pehchanta hai jo service chhodne wale hain." }
     },
     certifications: [
-      "AI Data Engineer (Reliance Foundation)", "Data Manager Internship", "Coder Hunt 1st Rank",
+      "AI Data Engineer (Reliance Foundation)", "Data Manager Internship", "Coder Hunt 3rd Rank",
       "Internal SIH 2025 1st Rank", "Hack Heist Top 10", "TechUdyam Hackathon MIET",
       "Innovating with Generative AI", "React.js Workshop", "IoT Workshop",
       "Internal SIH 2023", "Cybersecurity (Tech Mahindra)", "Code Kshetra Hackathon",
-      "AWS Cloud", "Android Fuelling Innovation", "Chess 2nd Rank University"
+      "AWS Cloud", "Android Fuelling Innovation"
     ],
     experience: [
-      { role: "CTO", company: "NextGen Tech Connect", period: "2025 – Present" },
       { role: "Data Manager Intern", company: "Dezign Bank", period: "2025" },
       { role: "Intern", company: "INNextIn", period: "Present" }
     ]
@@ -131,7 +130,7 @@
 
     // Greetings
     if (/^(hi|hello|hey|hola|namaste|yo|sup|what'?s up|kaise ho|namaskar|hii+|नमस्ते|हैलो|हाय|कैसे हो|क्या हाल|नमस्कार)/.test(msg)) {
-      return `Hey there! 👋 I'm **Aksh**, Ashish Kumar's AI assistant. I know everything about him — his projects, skills, achievements, you name it! What would you like to know?`;
+      return `Hey there! 👋 I'm **Aksh**, Khushi Kumari's AI assistant. I know everything about her — her projects, skills, achievements, you name it! What would you like to know?`;
     }
 
     // Specific project lookup - Highest Priority
@@ -149,12 +148,12 @@
 
     // How are you / chatbot identity
     if (/how are you|kaise ho|kaisa hai|tu kaun|tum kaun|tera naam|your name|who are you|kon hai|तुम कौन हो|तुम्हारा नाम|कैसे हो|तुम कौन/i.test(msg)) {
-      return `I'm **Aksh**! 🤖 Ashish Kumar's personal AI assistant. I'm doing great! I know everything about him — projects, skills, achievements, everything! Ask me anything! 😎`;
+      return `I'm **Aksh**! 🤖 Khushi Kumari's personal AI assistant. I'm doing great! I know everything about her — projects, skills, achievements, everything! Ask me anything! 😎`;
     }
 
     // Who is Ashish / about
-    if (/who (is|are)|about (ashish|him)|tell me about|kaun hai|ke bare me|bare me bata|btao ashish|ashish kon|^ashish$|^आशीष$|कौन है|बारे में|आशीष कौन|परिचय|आशीष/i.test(msg) && !msg.includes('project') && !msg.includes('skill') && !msg.includes('प्रोजेक्ट') && !msg.includes('अचीवमेंट')) {
-      return `**${K.name}** is a ${K.education} student from ${K.location}. He's currently working as an ${K.currentRole}. His focus combines Data Science with Full Stack & Mobile Development. 🚀`;
+    if (/who (is|are)|about (khushi|her)|tell me about|kaun hai|ke bare me|bare me bata|btao khushi|khushi kon|^khushi$|^खुशी$|कौन है|बारे में|खुशी कौन|परिचय|खुशी/i.test(msg) && !msg.includes('project') && !msg.includes('skill') && !msg.includes('प्रोजेक्ट') && !msg.includes('अचीवमेंट')) {
+      return `**${K.name}** is a ${K.education} student from ${K.location}. She's currently working as an ${K.currentRole}. Her focus combines Data Science with Full Stack & Mobile Development. 🚀`;
     }
 
     // Contact info
@@ -164,19 +163,19 @@
 
     // Skills
     if (/skill|tech|stack|language|framework|what (can he|does he)|kya aata|konsi language|skills bata|technology|स्किल्स|तकनीक|क्या आता है|कौन सी लैंग्वेज|टेक्नोलॉजी|स्किल्स बताओ/i.test(msg)) {
-      return `Ashish's tech stack:\n\n🔧 **Languages**: ${K.skills.languages.join(', ')}\n📱 **Frameworks**: ${K.skills.frameworks.join(', ')}\n📊 **Data**: ${K.skills.data.join(', ')}\n🛠️ **Tools**: ${K.skills.tools.join(', ')}\n\nHe's a true full-stack developer! 💪`;
+      return `Khushi's tech stack:\n\n🔧 **Languages**: ${K.skills.languages.join(', ')}\n📱 **Frameworks**: ${K.skills.frameworks.join(', ')}\n📊 **Data**: ${K.skills.data.join(', ')}\n🛠️ **Tools**: ${K.skills.tools.join(', ')}\n\nShe's a true full-stack developer! 💪`;
     }
 
     // Achievements
     if (/achieve|award|rank|win|gate|hackathon|competition|jeet|jita|kya kiya|achievement bata|kitne rank|अचीवमेंट|उपलब्धि|जीता|रैंक|अवार्ड|गेट|हैकथॉन|जीती|प्रतिस्पर्धा/i.test(msg)) {
-      let resp = `🏆 Ashish has some incredible achievements:\n\n`;
+      let resp = `🏆 Khushi has some incredible achievements:\n\n`;
       K.achievements.forEach(a => { resp += `• ${a}\n`; });
       return resp;
     }
 
     // Certifications
     if (/certif|cert|certificate bata|kitne certificate|सर्टिफिकेट|सर्टिफिकेशन/i.test(msg)) {
-      let resp = `📜 Ashish holds ${K.certifications.length} certifications:\n\n`;
+      let resp = `📜 Khushi holds ${K.certifications.length} certifications:\n\n`;
       K.certifications.slice(0, 8).forEach(c => { resp += `• ${c}\n`; });
       resp += `\n...and more! Check the About Page for all certificates.`;
       return resp;
@@ -185,7 +184,7 @@
     // General projects
     if (/project|work|built|portfolio|app|website|kya banaya|kitne project|projects bata|konsa project|प्रोजेक्ट|प्रोजेक्ट्स|क्या बनाया|काम|ऍप|वेबसाइट|कितने प्रोजेक्ट/i.test(msg)) {
       const projectNames = Object.keys(K.projects);
-      let resp = `Ashish has built **${projectNames.length}+ projects** across Flutter, Web, AI/ML, and Chrome Extensions:\n\n`;
+      let resp = `Khushi has built **${projectNames.length}+ projects** across Flutter, Web, AI/ML, and Chrome Extensions:\n\n`;
       projectNames.forEach(p => { resp += `• **${p}**\n`; });
       resp += `\nAsk me about any specific project for details! 🚀`;
       return resp;
@@ -195,12 +194,12 @@
 
     // Education
     if (/education|study|college|university|degree|btech|b\.tech|padhai|kahan padhte|konsa college|शिक्षा|पढ़ाई|कॉलेज|यूनिवर्सिटी|डिग्री|बीटेक/i.test(msg)) {
-      return `🎓 Ashish is pursuing **${K.education}**. He qualified **GATE 2026** with AIR 12467!`;
+      return `🎓 Khushi is pursuing **${K.education}**. She qualified **GATE 2026** with AIR 12467!`;
     }
 
     // Experience / work
     if (/experience|work|job|intern|role|cto|position|kahan kaam|kya karte|job bata|अनुभव|नौकरी|जॉब|इंटर्नशिप|कहाँ काम/i.test(msg)) {
-      let resp = `💼 Ashish's professional experience:\n\n`;
+      let resp = `💼 Khushi's professional experience:\n\n`;
       K.experience.forEach(exp => {
         resp += `• **${exp.role}** at ${exp.company} (${exp.period})\n`;
       });
@@ -209,42 +208,42 @@
 
     // Location
     if (/location|where|live|city|from|based|kahan se|kahan rehte|kahan ka|कहाँ रहते|लोकेशन|शहर|कहाँ से/i.test(msg)) {
-      return `📍 Ashish is based in **${K.location}**. He's open to remote opportunities worldwide! 🌏`;
+      return `📍 Khushi is based in **${K.location}**. She's open to remote opportunities worldwide! 🌏`;
     }
 
     // Hobbies
     if (/hobby|hobbies|interest|fun|free time|chess|food|shauk|kya karte spare|शौक|हॉबी|हॉबीज|फ्री टाइम|चेस|खाना/i.test(msg)) {
-      return `🎯 Ashish's hobbies:\n\n• ♟️ ${K.hobbies[0]}\n• 🍕 ${K.hobbies[1]}\n\nHe's not just a coder — he's well-rounded! 😄`;
+      return `🎯 Khushi's hobbies:\n\n• ♟️ ${K.hobbies[0]}\n• 🍕 ${K.hobbies[1]}\n\nShe's not just a coder — she's well-rounded! 😄`;
     }
 
     // GitHub / Social
     if (/github|social|linkedin|instagram|profile|गिटहब|सोशल|लिंक्डइन|लिंक्डइन|इंस्टाग्राम|प्रोफाइल/i.test(msg)) {
-      return `🔗 Ashish's social profiles:\n\n• **GitHub**: [Aashiskr](${K.github})\n• **LinkedIn**: [infashish](${K.linkedin})\n• **Instagram**: [inf._.ashish](${K.instagram})`;
+      return `🔗 Khushi's social profiles:\n\n• **GitHub**: [Aashiskr](${K.github})\n• **LinkedIn**: [infashish](${K.linkedin})\n• **Instagram**: [inf._.ashish](${K.instagram})`;
     }
 
     // Resume
     if (/resume|cv|download|रिज्यूमे|सीवी|डाउनलोड/i.test(msg)) {
-      return `📄 You can download Ashish's resume from the Resume Page. It has his complete profile!`;
+      return `📄 You can download Khushi's resume from the Resume Page. It has her complete profile!`;
     }
 
     // Flutter
     if (/flutter|dart|mobile|android|फ़्लटर|फ्लटर|डार्ट|मोबाइल|एंड्राइड|एंड्रॉयड/i.test(msg)) {
-      return `📱 Ashish has built several Flutter apps:\n\n• **Aksh English** — AI English learning app\n• **A-Lens** — Universal document viewer\n• **Notes App** — Offline notes app\n\nAll available on the Projects Page!`;
+      return `📱 Khushi has built several Flutter apps:\n\n• **Aksh English** — AI English learning app\n• **A-Lens** — Universal document viewer\n• **Notes App** — Offline notes app\n\nAll available on the Projects Page!`;
     }
 
     // AI / ML
     if (/ai|ml|machine learning|data science|prediction|model|एआई|मशीन लर्निंग|डेटा साइंस|ऑर्टिफिशल/i.test(msg)) {
-      return `🤖 Ashish's AI/ML projects:\n\n• **Aksh Virtual Assistant** — Shortlisted for Yukti Innovation Challenge 2025\n• **Cricket Score Prediction** — XGBoost model with ~96% accuracy\n• **Telco Customer Churn** — Random Forest dashboard in R/Shiny`;
+      return `🤖 Khushi's AI/ML projects:\n\n• **Aksh Virtual Assistant** — Shortlisted for Yukti Innovation Challenge 2025\n• **Cricket Score Prediction** — XGBoost model with ~96% accuracy\n• **Telco Customer Churn** — Random Forest dashboard in R/Shiny`;
     }
 
     // Thank you
     if (/thank|thanks|thx|shukriya|dhanyavad|धन्यवाद|शुक्रिया/i.test(msg)) {
-      return `You're welcome! 😊 Feel free to ask anything else about Ashish!`;
+      return `You're welcome! 😊 Feel free to ask anything else about Khushi!`;
     }
 
     // Bye
     if (/bye|goodbye|see you|later|alvida|chalo|bye bye|बाय|अलविदा/i.test(msg)) {
-      return `Goodbye! 👋 Great chatting with you. Don't forget to check out Ashish's projects! 🚀`;
+      return `Goodbye! 👋 Great chatting with you. Don't forget to check out Khushi's projects! 🚀`;
     }
 
     // Default
@@ -446,7 +445,7 @@
           </div>
           <div class="aksh-header-info">
             <h4>Aksh</h4>
-            <p><span class="status-dot"></span>Ashish's Voice AI</p>
+            <p><span class="status-dot"></span>Khushi's Voice AI</p>
           </div>
           <div class="aksh-header-controls">
             <button class="aksh-sound-toggle active" id="akshSound" title="Voice Output On"><i class="fas fa-volume-up"></i></button>
@@ -454,7 +453,7 @@
         </div>
         <div class="aksh-messages" id="akshMessages"></div>
         <div class="aksh-quick-btns" id="akshQuickBtns">
-          <button class="aksh-quick" data-msg="What are Ashish's projects?">Projects</button>
+          <button class="aksh-quick" data-msg="What are Khushi's projects?">Projects</button>
           <button class="aksh-quick" data-msg="What are his skills?">Skills</button>
           <button class="aksh-quick" data-msg="Ashish ke baare me batao">Hindi 🇮🇳</button>
         </div>
@@ -484,9 +483,9 @@
       chat.classList.toggle('open', isOpen);
       fab.classList.toggle('open', isOpen);
       if (isOpen && !hasGreeted) {
-        const greeting = "Hey! 👋 I'm **Aksh**, Ashish's Voice AI assistant. Ask me anything — type or use the mic! 🎙️ (English ya Hindi dono me!)";
+        const greeting = "Hey! 👋 I'm **Aksh**, Khushi's Voice AI assistant. Ask me anything — type or use the mic! 🎙️ (English ya Hindi dono me!)";
         addBotMessage(greeting);
-        speakText("Hey! I'm Aksh, Ashish's Voice A I assistant. Ask me anything, type or use the mic! English ya Hindi dono mein!"); // Initial speaking
+        speakText("Hey! I'm Aksh, Khushi's Voice A I assistant. Ask me anything, type or use the mic! English ya Hindi dono mein!"); // Initial speaking
         hasGreeted = true;
       }
       if (isOpen) input.focus();

@@ -1,0 +1,206 @@
+/* Local styles for Resume/Experience page */
+
+.timeline-wrapper {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent-violet), var(--accent-emerald), var(--accent-azure));
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+    border-radius: 50px;
+}
+
+.event-dot {
+    box-shadow: 0 0 20px var(--accent-violet);
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0% { box-shadow: 0 0 10px var(--accent-violet); }
+    50% { box-shadow: 0 0 25px var(--accent-violet); }
+    100% { box-shadow: 0 0 10px var(--accent-violet); }
+}
+
+.event-content.glass-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border-left: 4px solid transparent;
+}
+
+.event-content.glass-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+    border-left: 4px solid var(--accent-violet);
+}
+
+/* Achievement Boxes */
+.achievement-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.ach-box {
+    position: relative;
+    background: var(--bg-glass);
+    padding: 40px 30px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 1px solid var(--border-glass);
+    transition: var(--transition);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.ach-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(16, 185, 129, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.ach-box:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.ach-box:hover::before {
+    opacity: 1;
+}
+
+.ach-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: transform 0.4s ease;
+}
+
+.ach-box:hover .ach-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.ach-box h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.ach-box p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Cert slider enhanced */
+.cert-slider {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    padding: 20px 0;
+}
+
+.cert-track {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.cert-track img {
+    border-radius: 12px;
+    border: 1px solid var(--border-glass);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    object-fit: cover;
+    filter: grayscale(30%);
+}
+
+.cert-track img:hover {
+    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.4);
+    border-color: var(--accent-violet);
+    filter: grayscale(0%);
+    z-index: 2;
+    position: relative;
+}
+
+.cert-card img {
+    height: 180px;
+}
+
+/* Local polish for the 2026 redesign */
+.timeline-line {
+    background: linear-gradient(to bottom, var(--accent-gold), var(--accent-emerald), var(--accent-azure));
+    box-shadow: none;
+}
+
+.event-dot {
+    background: var(--accent-gold);
+    box-shadow: 0 0 0 7px rgba(255, 122, 89, 0.12);
+    animation: none;
+}
+
+.event-content.glass-card {
+    border-left: 1px solid var(--border-glass);
+    transition: var(--transition);
+}
+
+.event-content.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-premium);
+    border-left-color: rgba(255, 122, 89, 0.48);
+}
+
+.achievement-strip {
+    gap: 18px;
+}
+
+.ach-box {
+    background: linear-gradient(180deg, rgba(255,255,255,0.062), rgba(255,255,255,0.028));
+    border-radius: 8px;
+    box-shadow: 0 18px 60px rgba(0,0,0,0.22);
+}
+
+.ach-box::before {
+    background: linear-gradient(135deg, rgba(255,122,89,0.08), rgba(45,212,191,0.06));
+}
+
+.ach-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,122,89,0.34);
+}
+
+.ach-icon {
+    background: rgba(255,122,89,0.11);
+    color: var(--accent-gold);
+    -webkit-background-clip: initial;
+    background-clip: initial;
+}
+
+.cert-slider {
+    mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+}
+
+.cert-track {
+    gap: 18px;
+}
+
+.cert-track img:hover {
+    box-shadow: none;
+    border-color: var(--border-glass);
+}
+
+.cert-card img {
+    height: 185px;
+}

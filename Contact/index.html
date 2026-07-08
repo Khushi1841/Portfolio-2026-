@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Khushi Kumari | Developer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+    <div id="custom-cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <div class="bg-gradient"></div>
+    <canvas id="canvas-dots"></canvas>
+
+    <nav class="nav-glass" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../Data/images/logo-Photoroom.png" alt="Khushi Logo" class="logo-img">
+                <span class="logo-text">KHUSHI.</span>
+            </a>
+            
+            <div class="nav-links" id="nav-menu">
+                <a href="../index.html" class="nav-pill"><i class="fas fa-home"></i> Home</a>
+                <a href="../about/index.html" class="nav-pill"><i class="fas fa-user"></i> About</a>
+                <a href="../Project/index.html" class="nav-pill"><i class="fas fa-briefcase"></i> Experience</a>
+                <a href="../Resume/index.html" class="nav-pill"><i class="fas fa-project-diagram"></i> Projects</a>
+                <a href="index.html" class="nav-pill active"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main style="padding-top: 120px;">
+        <section class="sec-padding section-active" id="contact">
+            <div class="container section-head center">
+                <span class="section-tag reveal">Connect</span>
+                <h2 class="section-title reveal">Let's Build Something <span class="gradient-text">Great</span></h2>
+            </div>
+            
+            <div class="container contact-split">
+                <div class="contact-methods reveal">
+                    <div class="method-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>khushisingh80139@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="method-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+91 9113329839</p>
+                        </div>
+                    </div>
+                    <div class="method-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Meerut, India (Remote Available)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-row">
+                        <a href="https://github.com/Khushi1841" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/khushi-kumari-01" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-glass reveal">
+                    <form id="contact-form">
+                        <div class="input-grid">
+                            <div class="input-wrap">
+                                <label>Name</label>
+                                <input type="text" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="input-wrap">
+                                <label>Email</label>
+                                <input type="email" id="email" placeholder="example@mail.com" required>
+                            </div>
+                        </div>
+                        <div class="input-wrap">
+                            <label>Subject</label>
+                            <input type="text" id="subject" placeholder="Project Inquiry">
+                        </div>
+                        <div class="input-wrap">
+                            <label>Message</label>
+                            <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <div class="form-btns">
+                            <button type="button" id="btn-whatsapp" class="btn-primary">WhatsApp <i class="fab fa-whatsapp"></i></button>
+                            <button type="button" id="btn-email" class="btn-outline">Email <i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-connect">
+        <div class="footer-gradient-line"></div>
+        <div class="container footer-content">
+            <h2 class="footer-title">Let's Connect</h2>
+            <p class="footer-subtext">Feel free to reach out - I'm always open to new ideas and collaborations.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Khushi1841" target="_blank" class="social-circle"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/khushi-kumari-01" target="_blank" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Khushi Kumari. Designed with care and code.</p>
+        </div>
+    </footer>
+
+    <!-- Bot Integration -->
+    <script src="../chatbot/aksh.js"></script>
+    <script src="../script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+/* Local styles for About page */
+.about-layout {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 968px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.about-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-lg);
+  perspective: 1000px;
+}
+
+.about-image {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  z-index: 2;
+  border: 2px solid var(--border-glass);
+  background: var(--bg-dark);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-image-wrapper:hover .about-image img {
+  transform: scale(1.05);
+}
+
+.glow-border-about {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: calc(var(--radius-lg) + 5px);
+  background: linear-gradient(45deg, var(--accent-violet), var(--accent-emerald), var(--accent-azure));
+  z-index: 1;
+  animation: pulse-glow 3s infinite alternate;
+  opacity: 0.8;
+  filter: blur(10px);
+}
+
+@keyframes pulse-glow {
+  0% { opacity: 0.6; filter: blur(8px); }
+  100% { opacity: 1; filter: blur(15px); }
+}
+
+.floating-badge {
+  position: absolute;
+  background: rgba(15, 15, 20, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 3;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  animation: float-badge 4s ease-in-out infinite;
+}
+
+.floating-badge i {
+  color: var(--accent-emerald);
+  font-size: 1.1rem;
+}
+
+.fb-1 {
+  top: 10%;
+  right: -20px;
+}
+
+.fb-2 {
+  bottom: 15%;
+  left: -20px;
+  animation-delay: 2s;
+}
+
+.fb-2 i {
+  color: var(--accent-violet);
+}
+
+@keyframes float-badge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.interactive-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.interactive-card::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 10%, transparent 40%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.interactive-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.interactive-card:hover::before {
+  opacity: 1;
+}
+
+.interactive-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about-points {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.about-points li {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-glass);
+  transition: var(--transition);
+}
+
+.about-points li:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent-violet);
+  transform: translateX(5px);
+}
+
+/* Local polish for the 2026 redesign */
+.about-layout {
+  gap: clamp(36px, 7vw, 84px);
+}
+
+.glow-border-about {
+  background: linear-gradient(135deg, rgba(255,122,89,0.95), rgba(45,212,191,0.84));
+  filter: none;
+  animation: none;
+}
+
+.floating-badge {
+  border-radius: 8px;
+  background: rgba(8, 9, 12, 0.82);
+  border-color: var(--border-glass);
+}
+
+.floating-badge i,
+.fb-2 i {
+  color: var(--accent-gold);
+}
+
+.interactive-card:hover,
+.about-points li:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,122,89,0.34);
+}
+
+.about-points li {
+  background: rgba(255,255,255,0.045);
+  border-color: var(--border-glass);
+  border-radius: 8px;
+}
